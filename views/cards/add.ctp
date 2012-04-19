@@ -2,12 +2,7 @@
 <?php echo $this->Form->create('Card');?>
 	<fieldset>
 		<legend><?php __('Add Card'); ?></legend>
-	<?php
-		echo $this->Form->input('card_number');
-		echo $this->Form->input('customer_id');
-		echo $this->Form->input('verification');
-		echo $this->Form->input('expiration_date');
-	?>
+	<?php echo $this->element('form_card'); ?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>

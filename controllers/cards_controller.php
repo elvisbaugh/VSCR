@@ -59,7 +59,7 @@ class CardsController extends AppController {
 	#protected methods
 	
 	function _list() {
-		$customers = $this->Card->Customer->find('list');
+		$customers = $this->Card->Customer->find('list', array('fields' => 'Customer.first_name'));
 		$this->set(compact('customers'));
 	
 	}

@@ -2,11 +2,7 @@
 <?php echo $this->Form->create('Rental');?>
 	<fieldset>
 		<legend><?php __('Add Rental'); ?></legend>
-	<?php
-		echo $this->Form->input('customer_id');
-		echo $this->Form->input('vehicle_id');
-		echo $this->Form->input('card_id');
-	?>
+	<?php echo $this->element('form_rental'); ?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>

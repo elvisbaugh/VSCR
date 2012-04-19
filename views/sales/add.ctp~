@@ -2,7 +2,11 @@
 <?php echo $this->Form->create('Sale');?>
 	<fieldset>
 		<legend><?php __('Add Sale'); ?></legend>
-	<?php echo $this->element('form_sale'); ?>
+	<?php
+		echo $this->Form->input('customer_id');
+		echo $this->Form->input('vehicle_id');
+		echo $this->Form->input('card_id');
+	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>

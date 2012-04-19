@@ -48,5 +48,57 @@ class Vehicle extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	
+	var $validate = array(
+		'customer_id' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must belong to customer'
+			)
+		),
+		'vehicle_typed' => array(
+			'maxLength' => array(
+			'rule' => array('maxLength', 1),
+			'allowEmpty' => false,
+			'message' => 'must have a type'
+			)
+		),
+		'make' => array(
+			'maxLength' => array(
+			'rule' => array('maxLength', 1),
+			'allowEmpty' => false,
+			'message' => 'must have a make'
+			)
+		),
+		'year_of_vehicle' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must have a year'
+			)
+		),
+		'transmission' => array(
+			'maxLength' => array(
+			'rule' => array('maxLength', 1),
+			'allowEmpty' => false,
+			'message' => 'must have a transmission'
+			)
+		),
+		'price' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must have a price'
+			)
+		),
+		'policy_id' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must have a policy'
+			)
+		)
+	);
 
 }

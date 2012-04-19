@@ -58,15 +58,15 @@ class Vehicle extends AppModel {
 			)
 		),
 		'vehicle_typed' => array(
-			'maxLength' => array(
-			'rule' => array('maxLength', 1),
+			'minLength' => array(
+			'rule' => array('minLength', 1),
 			'allowEmpty' => false,
 			'message' => 'must have a type'
 			)
 		),
 		'make' => array(
-			'maxLength' => array(
-			'rule' => array('maxLength', 1),
+			'minLength' => array(
+			'rule' => array('minLength', 1),
 			'allowEmpty' => false,
 			'message' => 'must have a make'
 			)
@@ -79,8 +79,8 @@ class Vehicle extends AppModel {
 			)
 		),
 		'transmission' => array(
-			'maxLength' => array(
-			'rule' => array('maxLength', 1),
+			'minLength' => array(
+			'rule' => array('minLength', 1),
 			'allowEmpty' => false,
 			'message' => 'must have a transmission'
 			)
