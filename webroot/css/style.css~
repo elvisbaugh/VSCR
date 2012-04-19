@@ -89,12 +89,12 @@ a:hover {
 /* ***** */
 
 body {
-	background: url('../img/vladstudio_motion3_1920x1200.jpg');
+	background: url('cars/vladstudio_motion3_1920x1200.jpg');
 	
 }
 
 #wrapper {
-	background: #375114 url(../img/body_bg.gif) repeat-y;
+	background: #375114 url(images/body_bg.gif) repeat-y;
 }
 
 h1 {
@@ -228,11 +228,11 @@ h1 {
 }
 
 #vehicles p.gallery {
-	background: url(../img/ico_search.gif) left center no-repeat;
+	background: url(images/ico_search.gif) left center no-repeat;
 }
 
 #vehicles p.buy {
-	background: url(../img/ico_buy.gif) left center no-repeat;
+	background: url(images/ico_buy.gif) left center no-repeat;
 }
 
 #news {
