@@ -57,7 +57,7 @@ class Vehicle extends AppModel {
 			'message' => 'must belong to customer'
 			)
 		),
-		'vehicle_typed' => array(
+		'vehicle_type' => array(
 			'minLength' => array(
 			'rule' => array('minLength', 1),
 			'allowEmpty' => false,

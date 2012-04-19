@@ -10,8 +10,7 @@ class CustomersController extends AppController {
 
 	function view($id = null) {
 		if (!$id) {
-			$this->Session->setFlash(__('Invalid customer', true));
-			$this->redirect(array('action' => 'index'));
+			$this->flashWarning('Invalid customer', 'index');
 		}
 		$this->set('customer', $this->Customer->read(null, $id));
 	}
@@ -20,46 +19,44 @@ class CustomersController extends AppController {
 		if (!empty($this->data)) {
 			$this->Customer->create();
 			if ($this->Customer->save($this->data)) {
-				$this->Session->setFlash(__('The customer has been saved', true));
-				$this->redirect(array('action' => 'index'));
+				$this->flashSuccess('The customer has been saved', 'index');
 			} else {
-				$this->Session->setFlash(__('The customer could not be saved. Please, try again.', true));
+				$this->flashWarning('The customer could not be saved. Please, try again.');
 			}
 		}
-		$parishes = $this->Customer->Parish->find('list');
-		$this->set(compact('parishes'));
+		$this->_list();
 	}
 
 	function edit($id = null) {
-		if (!$id && empty($this->data)) {
-			$this->Session->setFlash(__('Invalid customer', true));
-			$this->redirect(array('action' => 'index'));
-		}
+		$this->idEmptyRedirect($id, 'index'); 
 		if (!empty($this->data)) {
 			if ($this->Customer->save($this->data)) {
-				$this->Session->setFlash(__('The customer has been saved', true));
-				$this->redirect(array('action' => 'index'));
+				$this->flashSuccess('The customer has been saved', 'index');
 			} else {
-				$this->Session->setFlash(__('The customer could not be saved. Please, try again.', true));
+				$this->flashWarning('The customer could not be saved. Please, try again.');
 			}
 		}
 		if (empty($this->data)) {
 			$this->data = $this->Customer->read(null, $id);
 		}
-		$parishes = $this->Customer->Parish->find('list');
-		$this->set(compact('parishes'));
+		$this->_list();
 	}
 
 	function delete($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(__('Invalid id for customer', true));
-			$this->redirect(array('action'=>'index'));
-		}
+		$this->idEmptyRedirect($id, 'index');
 		if ($this->Customer->delete($id)) {
-			$this->Session->setFlash(__('Customer deleted', true));
-			$this->redirect(array('action'=>'index'));
+			$this->flashsuccess('Customer deleted', 'index');
 		}
-		$this->Session->setFlash(__('Customer was not deleted', true));
-		$this->redirect(array('action' => 'index'));
+		$this->flashWarning('Customer was not deleted', 'index');
 	}
+	
+	
+	
+	function _list() {
+	
+		$parishes = $this->Customer->Parish->find('list');
+		$this->set(compact('parishes'));
+	}
+	
+	
 }

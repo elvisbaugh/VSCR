@@ -2,7 +2,16 @@
 <?php echo $this->Form->create('Customer');?>
 	<fieldset>
 		<legend><?php __('Add Customer'); ?></legend>
-		<?php echo $this->element('form_customer'); ?>
+	<?php
+		echo $this->Form->input('name');
+		echo $this->Form->input('address');
+		echo $this->Form->input('city');
+		echo $this->Form->input('parish_id');
+		echo $this->Form->input('postal_code');
+		echo $this->Form->input('receipt');
+		echo $this->Form->input('created_at');
+		echo $this->Form->input('modified_at');
+	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>

@@ -1,0 +1,1 @@
+2012-04-19 18:09:55 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'Customer.first_name' in 'field list'</span> in [C:\wamp\cake\cake\libs\model\datasources\dbo_source.php, line 684]

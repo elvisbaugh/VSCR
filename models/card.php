@@ -69,13 +69,6 @@ class Card extends AppModel {
 			'message' => 'must be 3 digits long'
 			),
 		),
-		'expiration_date' => array(
-			'date' => array(
-			'rule' => 'date',
-			'allowEmpty' => false,
-			'message' => 'must have expiration date'
-			)
-		),
 		'customer_id' => array(
 			'numeric' => array(
 			'rule' => 'numeric',

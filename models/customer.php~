@@ -67,5 +67,58 @@ class Customer extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	
+	var $validate = array(
+		'first_name' => array(
+			'minLength' => array(
+			'rule' => array('minLength',1),
+			'allowEmpty' => false,
+			'message' => 'must have a first name'
+			)
+		),
+		'last_name' => array(
+			'minLength' => array(
+			'rule' => array('minLength',1),
+			'allowEmpty' => false,
+			'message' => 'must have a last name'
+			)
+		),
+		'address' => array(
+			'minLength' => array(
+			'rule' => array('minLength',1),
+			'allowEmpty' => false,
+			'message' => 'must have a address name'
+			)
+		),
+		'city' => array(
+			'minLength' => array(
+			'rule' => array('minLength',1),
+			'allowEmpty' => false,
+			'message' => 'must have a city name'
+			)
+		),
+		'postal_code' => array(
+			'minLength' => array(
+			'rule' => array('minLength',1),
+			'allowEmpty' => true,
+			'message' => 'must have postal code'
+			)
+		),
+		'receipt' => array(
+			'minLength' => array(
+			'rule' => array('minLength',1),
+			'allowEmpty' => true,
+			'message' => 'must have a number'
+			)
+		),
+		'parish_id' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => true,
+			'message' => 'must have a parish'
+			)
+		)
+		
+	);
 
 }

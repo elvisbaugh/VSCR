@@ -69,18 +69,11 @@ class Customer extends AppModel {
 	);
 	
 	var $validate = array(
-		'first_name' => array(
+		'name' => array(
 			'minLength' => array(
-			'rule' => array('minLength',1),
+			'rule' => array('minLength', 10),
 			'allowEmpty' => false,
-			'message' => 'must have a first name'
-			)
-		),
-		'last_name' => array(
-			'minLength' => array(
-			'rule' => array('minLength',1),
-			'allowEmpty' => false,
-			'message' => 'must have a last name'
+			'message' => 'Customer must have a name.'
 			)
 		),
 		'address' => array(

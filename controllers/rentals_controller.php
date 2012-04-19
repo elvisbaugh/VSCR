@@ -43,7 +43,6 @@ class RentalsController extends AppController {
 			$this->data = $this->Rental->read(null, $id);
 		}
 		$this->_list();
-		$this->set(compact('customers', 'vehicles', 'cards'));
 	}
 
 	function delete($id = null) {
@@ -58,9 +57,9 @@ class RentalsController extends AppController {
 	
 	function _list() {
 		
-		$customers = $this->Rental->Customer->find('list');
-		$vehicles = $this->Rental->Vehicle->find('list');
-		$cards = $this->Rental->Card->find('list');
+		$customers = $this->Rental->Customer->find('list', array('fields' => 'Customer.name'));
+		$vehicles = $this->Rental->Vehicle->find('list', array('fields' => 'Vehicle.vehicle_type'));
+		$cards = $this->Rental->Card->find('list', array('fields' => 'Card.card_number'));
 		$this->set(compact('customers', 'vehicles', 'cards'));
 	
 	}

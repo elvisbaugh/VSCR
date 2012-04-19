@@ -3,8 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
-			<th><?php echo $this->Paginator->sort('first_name');?></th>
-			<th><?php echo $this->Paginator->sort('last_name');?></th>
+			<th><?php echo $this->Paginator->sort('name');?></th>
 			<th><?php echo $this->Paginator->sort('address');?></th>
 			<th><?php echo $this->Paginator->sort('city');?></th>
 			<th><?php echo $this->Paginator->sort('parish_id');?></th>
@@ -24,8 +23,7 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $customer['Customer']['id']; ?>&nbsp;</td>
-		<td><?php echo $customer['Customer']['first_name']; ?>&nbsp;</td>
-		<td><?php echo $customer['Customer']['last_name']; ?>&nbsp;</td>
+		<td><?php echo $customer['Customer']['name']; ?>&nbsp;</td>
 		<td><?php echo $customer['Customer']['address']; ?>&nbsp;</td>
 		<td><?php echo $customer['Customer']['city']; ?>&nbsp;</td>
 		<td>
