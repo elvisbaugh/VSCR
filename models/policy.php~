@@ -1,13 +1,13 @@
 <?php
-class Parish extends AppModel {
-	var $name = 'Parish';
+class Policy extends AppModel {
+	var $name = 'Policy';
 	var $displayField = 'name';
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 	var $hasMany = array(
-		'Customer' => array(
-			'className' => 'Customer',
-			'foreignKey' => 'parish_id',
+		'Vehicle' => array(
+			'className' => 'Vehicle',
+			'foreignKey' => 'policy_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -17,16 +17,6 @@ class Parish extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		)
-	);
-	
-	var $validate = array(
-		'name' => array(
-			'ruleName' => array(
-			'rule' => array('minlength', 1),
-			'allowEmpty' => false,
-			'message' => 'must enter a parish'
-			)
 		)
 	);
 

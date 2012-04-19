@@ -19,5 +19,21 @@ class Policy extends AppModel {
 			'counterQuery' => ''
 		)
 	);
+	var $validate = array(
+		'name' => array(
+			'ruleName' => array(
+			'rule' => array('minlength', 1),
+			'allowEmpty' => false,
+			'message' => 'must have policy name'
+			)
+		),
+		'description' => array(
+			'ruleName' => array(
+			'rule' => array('minlength', 1),
+			'allowEmpty' => true,
+			'message' => 'must have a description'
+			)
+		),
+	);
 
 }

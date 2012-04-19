@@ -26,28 +26,4 @@ class Sale extends AppModel {
 			'order' => ''
 		)
 	);
-	
-	var $validate = array(
-		'customer_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'sale belongs to customer'
-			)
-		),
-		'vehicle_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'sale belongs to vehicle'
-			)
-		),
-		'card_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'sale belongs to card'
-			)
-		)
-	);
 }

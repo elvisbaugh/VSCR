@@ -19,15 +19,5 @@ class Parish extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-	
-	var $validate = array(
-		'name' => array(
-			'ruleName' => array(
-			'rule' => array('minlength', 1),
-			'allowEmpty' => false,
-			'message' => 'must enter a parish'
-			)
-		)
-	);
 
 }

@@ -1,6 +1,6 @@
 <?php
-class Sale extends AppModel {
-	var $name = 'Sale';
+class Rental extends AppModel {
+	var $name = 'Rental';
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 	var $belongsTo = array(
@@ -24,30 +24,6 @@ class Sale extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
-	);
-	
-	var $validate = array(
-		'customer_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'sale belongs to customer'
-			)
-		),
-		'vehicle_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'sale belongs to vehicle'
-			)
-		),
-		'card_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'sale belongs to card'
-			)
 		)
 	);
 }

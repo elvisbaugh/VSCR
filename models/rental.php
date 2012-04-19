@@ -26,4 +26,28 @@ class Rental extends AppModel {
 			'order' => ''
 		)
 	);
+	
+	var $validate = array(
+		'customer_id' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must belong to customer'
+			)
+		),
+		'vehicle_id' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must belong to vehicle'
+			)
+		),
+		'card_id' => array(
+			'numeric' => array(
+			'rule' => 'numeric',
+			'allowEmpty' => false,
+			'message' => 'must belong to card'
+			)
+		)
+	);
 }

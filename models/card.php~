@@ -41,48 +41,5 @@ class Card extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-	
-	var $validate = array(
-		'card_number' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'must be a number'
-			)
-		),
-		'verification' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'must be a number'
-			),
-			
-			'minLength' => array(
-			'rule' => array('minLength', 3),
-			'allowEmpty' => false,
-			'message' => 'must be 3 digits long'
-			),
-			
-			'maxLength' => array(
-			'rule' => array('maxLength', 3),
-			'allowEmpty' => false,
-			'message' => 'must be 3 digits long'
-			),
-		),
-		'expiration_date' => array(
-			'date' => array(
-			'rule' => 'date',
-			'allowEmpty' => false,
-			'message' => 'must have expiration date'
-			)
-		),
-		'customer_id' => array(
-			'numeric' => array(
-			'rule' => 'numeric',
-			'allowEmpty' => false,
-			'message' => 'must have expiration date'
-			)
-		)  
-	);
 
 }
